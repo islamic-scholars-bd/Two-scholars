@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="bn" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>বাংলাদেশের দুইজন পছন্দ করা হুজুর | ড. মিজানুর রহমান আজহারী ও মাওলানা মনিরুজ্জামান খান</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            emerald: {
+              850: '#073324',
+              950: '#031a12',
+            },
+            gold: {
+              400: '#f5c842',
+              500: '#d4af37',
+              600: '#b8860b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="islamic-bg text-gray-800 dark:text-gray-100 min-h-screen transition-colors duration-300">
+
+  <!-- 1. Header & Navigation -->
+  <header class="sticky top-0 z-40 bg-white/90 dark:bg-emerald-950/90 backdrop-blur-md border-b border-gold-500/20 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center space-x-3">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-emerald-800 to-emerald-600 border-2 border-gold-500 flex items-center justify-center text-gold-400 shadow-md">
+            <i class="fas fa-mosque text-xl"></i>
+          </div>
+          <div>
+            <h1 class="text-xl sm:text-2xl font-bold tracking-wide text-emerald-900 dark:text-gold-400">দ্বীনি আলোকবর্তিকা</h1>
+            <p class="text-xs text-gray-500 dark:text-emerald-300">বাংলাদেশের দুইজন পছন্দ করা হুজুর</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8 font-medium text-sm">
+          <a href="#scholars" class="hover:text-gold-500 dark:hover:text-gold-400 transition-colors">স্কলার পরিচিতি</a>
+          <a href="#bayans" class="hover:text-gold-500 dark:hover:text-gold-400 transition-colors">নির্বাচিত বয়ান</a>
+          <a href="#quotes" class="hover:text-gold-500 dark:hover:text-gold-400 transition-colors">বাণী ও নসিহত</a>
+          <a href="#tasbih" class="hover:text-gold-500 dark:hover:text-gold-400 transition-colors">ডিজিটাল তাসবীহ</a>
+          <a href="#duas" class="hover:text-gold-500 dark:hover:text-gold-400 transition-colors">মাসনূন দোয়া</a>
+        </nav>
+
+        <!-- Right Controls (Theme Toggle) -->
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle" class="p-2.5 rounded-full bg-emerald-100 dark:bg-emerald-900/60 border border-gold-500/30 hover:border-gold-500 transition-all shadow-sm" title="থিম পরিবর্তন করুন">
+            <i id="theme-icon" class="fas fa-sun text-yellow-400"></i>
+          </button>
+          <a href="#tasbih" class="hidden sm:inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-700 to-emerald-600 hover:from-emerald-600 hover:to-emerald-500 text-white font-semibold text-xs tracking-wider uppercase border border-gold-500/50 shadow-md">
+            <i class="fas fa-fingerprint mr-2 text-gold-400"></i> যিকির করুন
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Hero Section -->
+  <section class="relative pt-12 pb-20 overflow-hidden">
+    <!-- Subtle Background Glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-emerald-600/10 dark:bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      
+      <!-- Bismillah Calligraphy -->
+      <div class="mb-6">
+        <span class="arabic-font text-3xl sm:text-5xl gold-gradient-text tracking-wider font-bold select-none">
+          بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ
+        </span>
+      </div>
+
+      <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-emerald-50 dark:bg-emerald-950/80 border border-gold-500/40 text-emerald-800 dark:text-gold-400 text-sm sm:text-base font-bold mb-6 shadow-sm">
+        <i class="fas fa-heart text-gold-500"></i> বাংলাদেশের দুইজন পছন্দ করা হুজুর
+      </div>
+
+      <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
+        কুরআন ও সুন্নাহর আলোকে <br class="hidden sm:block" />
+        <span class="emerald-gradient-text">হেদায়েত ও আত্মশুদ্ধির পথপ্রদর্শক</span>
+      </h2>
+
+      <p class="max-w-2xl mx-auto text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-10 leading-relaxed">
+        আধুনিক যুবসমাজকে দ্বীনের পতাকাতলে আহ্বান এবং খাঁটি সুন্নাহর ভিত্তিতে সমাজ সংস্কারে নিবেদিত দুই প্রখ্যাত আলেমে দ্বীন—<strong>ড. মিজানুর রহমান আজহারী</strong> এবং <strong>মাওলানা মনিরুজ্জামান খান</strong>-এর দ্বীনি খিদমতের এক অনন্য সংগ্রহশালা।
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="#scholars" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-emerald-800 to-emerald-700 hover:from-emerald-700 hover:to-emerald-600 text-white font-bold text-base shadow-lg hover:shadow-xl transition-all border border-gold-500/40 flex items-center gap-3">
+          <i class="fas fa-user-tie text-gold-400"></i> স্কলারদের পরিচিতি
+        </a>
+        <a href="#bayans" class="px-8 py-3.5 rounded-xl bg-white dark:bg-emerald-950/80 hover:bg-emerald-50 dark:hover:bg-emerald-900/60 text-emerald-900 dark:text-gold-300 font-bold text-base shadow-md transition-all border border-emerald-300 dark:border-gold-500/30 flex items-center gap-3">
+          <i class="fas fa-headphones text-gold-500"></i> নির্বাচিত বয়ান শুনুন
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Dual Scholars Spotlight Cards -->
+  <section id="scholars" class="py-16 bg-emerald-50/50 dark:bg-emerald-950/40 border-y border-gold-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-gold-600 dark:text-gold-400">দাঈ ইলাল্লাহ</span>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 dark:text-white mt-1">বাংলাদেশের দুইজন পছন্দ করা হুজুর</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">ড. মিজানুর রহমান আজহারী এবং মাওলানা মনিরুজ্জামান খান</p>
+        <div class="w-20 h-1 bg-gradient-to-r from-gold-400 to-emerald-600 mx-auto mt-3 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 max-w-5xl mx-auto">
+        
+        <!-- Scholar 1: Dr. Mizanur Rahman Azhari -->
+        <div class="glass-card rounded-3xl p-8 relative flex flex-col justify-between overflow-hidden group">
+          <!-- Background Accent Badge -->
+          <div class="absolute -right-8 -top-8 w-32 h-32 bg-emerald-500/10 dark:bg-emerald-400/10 rounded-full blur-xl pointer-events-none"></div>
+
+          <div>
+            <div class="scholar-img-container aspect-square max-w-[280px] mx-auto mb-6">
+              <img src="assets/images/azhari.png" alt="ড. মিজানুর রহমান আজহারী" class="w-full h-full object-cover object-top">
+            </div>
+
+            <div class="text-center">
+              <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-900/80 text-emerald-800 dark:text-gold-300 border border-gold-500/30 mb-3">
+                <i class="fas fa-graduation-cap mr-1.5 text-gold-500"></i> আল-আজহার বিশ্ববিদ্যালয়, মিশর
+              </div>
+              <h4 class="text-2xl sm:text-3xl font-bold text-emerald-950 dark:text-white mb-2">ড. মিজানুর রহমান আজহারী</h4>
+              <p class="text-sm text-gold-600 dark:text-gold-400 font-semibold mb-4">বিশিষ্ট ইসলামিক স্কলার, গবেষক ও সুবক্তা</p>
+              
+              <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                কুরআনের আধুনিক ও বিজ্ঞানসম্মত তাফসীর, সাবলীল উপস্থাপন এবং তরুণ প্রজন্মকে ইসলামের সৌন্দর্য ও আদর্শে উদ্বুদ্ধ করার ক্ষেত্রে তিনি এক অনন্য ব্যক্তিত্ব।
+              </p>
+            </div>
+
+            <!-- Focus Pills -->
+            <div class="flex flex-wrap justify-center gap-2 mb-6 text-xs font-medium">
+              <span class="px-3 py-1 bg-emerald-100/60 dark:bg-emerald-900/40 rounded-lg text-emerald-800 dark:text-emerald-200">তাফসীরুল কুরআন</span>
+              <span class="px-3 py-1 bg-emerald-100/60 dark:bg-emerald-900/40 rounded-lg text-emerald-800 dark:text-emerald-200">যুবসমাজ সংস্কার</span>
+              <span class="px-3 py-1 bg-emerald-100/60 dark:bg-emerald-900/40 rounded-lg text-emerald-800 dark:text-emerald-200">সমকালীন ইসলাম</span>
+            </div>
+          </div>
+
+          <button onclick="openBioModal('azhari')" class="w-full py-3 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-semibold text-sm transition-all shadow-md flex items-center justify-center gap-2 border border-gold-500/40">
+            <i class="fas fa-book-open text-gold-400"></i> বিস্তারিত জীবনী ও অবদান
+          </button>
+        </div>
+
+        <!-- Scholar 2: Maulana Monir Ujjaman Khan -->
+        <div class="glass-card rounded-3xl p-8 relative flex flex-col justify-between overflow-hidden group">
+          <div class="absolute -right-8 -top-8 w-32 h-32 bg-gold-500/10 rounded-full blur-xl pointer-events-none"></div>
+
+          <div>
+            <div class="scholar-img-container aspect-square max-w-[280px] mx-auto mb-6">
+              <img src="assets/images/monir_khan.png" alt="মাওলানা মনিরুজ্জামান খান" class="w-full h-full object-cover object-top">
+            </div>
+
+            <div class="text-center">
+              <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-900/80 text-emerald-800 dark:text-gold-300 border border-gold-500/30 mb-3">
+                <i class="fas fa-quran mr-1.5 text-gold-500"></i> সুন্নাহর দাঈ ও আলেম
+              </div>
+              <h4 class="text-2xl sm:text-3xl font-bold text-emerald-950 dark:text-white mb-2">মাওলানা মনিরুজ্জামান খান</h4>
+              <p class="text-sm text-gold-600 dark:text-gold-400 font-semibold mb-4">শ্রদ্ধেয় ইসলামিক চিন্তাবিদ ও সুন্নাহ গবেষক</p>
+              
+              <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                বিশুদ্ধ সুন্নাহভিত্তিক জীবনযাপন, আত্মশুদ্ধি, আখলাক ও পারিবারিক শান্তি প্রতিষ্ঠায় তাঁর সুললিত নসিহত ও দিকনির্দেশনা মানুষের অন্তরে আলো ছড়ায়।
+              </p>
+            </div>
+
+            <!-- Focus Pills -->
+            <div class="flex flex-wrap justify-center gap-2 mb-6 text-xs font-medium">
+              <span class="px-3 py-1 bg-emerald-100/60 dark:bg-emerald-900/40 rounded-lg text-emerald-800 dark:text-emerald-200">সুন্নাহর বাস্তবায়ন</span>
+              <span class="px-3 py-1 bg-emerald-100/60 dark:bg-emerald-900/40 rounded-lg text-emerald-800 dark:text-emerald-200">আখলাক ও তাসাউফ</span>
+              <span class="px-3 py-1 bg-emerald-100/60 dark:bg-emerald-900/40 rounded-lg text-emerald-800 dark:text-emerald-200">পারিবারিক সুখ</span>
+            </div>
+          </div>
+
+          <button onclick="openBioModal('monir')" class="w-full py-3 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-semibold text-sm transition-all shadow-md flex items-center justify-center gap-2 border border-gold-500/40">
+            <i class="fas fa-book-open text-gold-400"></i> বিস্তারিত জীবনী ও খিদমত
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Selected Bayan & Lectures Section -->
+  <section id="bayans" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <span class="text-xs font-bold uppercase tracking-widest text-gold-600 dark:text-gold-400">দ্বীনি আলোচনা ও খোতবা</span>
+      <h3 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 dark:text-white mt-1">নির্বাচিত বয়ান ও তাফসীর সংকলন</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300 max-w-xl mx-auto mt-2">স্কলার বা বিষয় অনুযায়ী সহজেই আপনার পছন্দের আলোচনা খুঁজে শুনুন</p>
+      <div class="w-20 h-1 bg-gradient-to-r from-gold-400 to-emerald-600 mx-auto mt-3 rounded-full"></div>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="flex flex-wrap items-center justify-center gap-2.5 mb-12">
+      <button class="bayan-filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all border border-emerald-700/20 bg-emerald-700 text-white dark:bg-emerald-600" data-filter="all">
+        সকল বয়ান
+      </button>
+      <button class="bayan-filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all border border-emerald-700/20 bg-white text-gray-700 dark:bg-emerald-950/60 dark:text-gray-300" data-filter="azhari">
+        ড. মিজানুর রহমান আজহারী
+      </button>
+      <button class="bayan-filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all border border-emerald-700/20 bg-white text-gray-700 dark:bg-emerald-950/60 dark:text-gray-300" data-filter="monir">
+        মাওলানা মনিরুজ্জামান খান
+      </button>
+      <button class="bayan-filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all border border-emerald-700/20 bg-white text-gray-700 dark:bg-emerald-950/60 dark:text-gray-300" data-filter="tafsir">
+        কুরআন ও তাফসীর
+      </button>
+      <button class="bayan-filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all border border-emerald-700/20 bg-white text-gray-700 dark:bg-emerald-950/60 dark:text-gray-300" data-filter="family">
+        পারিবারিক জীবন ও চরিত্র
+      </button>
+    </div>
+
+    <!-- Bayan Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Bayan 1 -->
+      <div class="bayan-card glass-card rounded-2xl p-6 flex flex-col justify-between" data-scholar="azhari" data-category="tafsir">
+        <div>
+          <div class="flex items-center justify-between text-xs text-gold-600 dark:text-gold-400 font-semibold mb-3">
+            <span><i class="fas fa-user-circle mr-1"></i> ড. মিজানুর রহমান আজহারী</span>
+            <span class="px-2.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200">তাফসীর</span>
+          </div>
+          <h5 class="text-lg font-bold text-emerald-950 dark:text-white mb-2 leading-snug">সূরা আল-কাহাফ: ফিতনা থেকে বাঁচার ৪টি অলৌকিক শিক্ষা</h5>
+          <p class="text-xs text-gray-600 dark:text-gray-300 line-clamp-3 mb-4 leading-relaxed">
+            দাজ্জালের ফিতনা, জ্ঞান, সম্পদ ও ক্ষমতার পরীক্ষার মুখে মুমিনের আত্মরক্ষা নিয়ে সূরা কাহাফের ৪টি অনন্য কাহিনীর আধুনিক জীবনমুখী ব্যাখ্যা।
+          </p>
+        </div>
+        <div class="pt-4 border-t border-gray-100 dark:border-emerald-900/40 flex items-center justify-between">
+          <span class="text-xs text-gray-500 dark:text-gray-400"><i class="far fa-clock mr-1"></i> ৪৫ মিনিট</span>
+          <a href="https://www.youtube.com/results?search_query=mizanur+rahman+azhari+surah+kahf" target="_blank" class="inline-flex items-center text-xs font-bold text-emerald-700 dark:text-gold-400 hover:underline">
+            <i class="fab fa-youtube text-red-500 mr-1.5 text-base"></i> শুনুন
+          </a>
+        </div>
+      </div>
+
+      <!-- Bayan 2 -->
+      <div class="bayan-card glass-card rounded-2xl p-6 flex flex-col justify-between" data-scholar="monir" data-category="family">
+        <div>
+          <div class="flex items-center justify-between text-xs text-gold-600 dark:text-gold-400 font-semibold mb-3">
+            <span><i class="fas fa-user-circle mr-1"></i> মাওলানা মনিরুজ্জামান খান</span>
+            <span class="px-2.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200">পারিবারিক সুখ</span>
+          </div>
+          <h5 class="text-lg font-bold text-emerald-950 dark:text-white mb-2 leading-snug">সুন্নাহর আলোকে আদর্শ দাম্পত্য জীবন ও শান্তির নীড়</h5>
+          <p class="text-xs text-gray-600 dark:text-gray-300 line-clamp-3 mb-4 leading-relaxed">
+            রাসূলুল্লাহ (সা.)-এর সুন্নাহ অনুযায়ী স্বামী-স্ত্রীর পারস্পরিক অধিকার, ভালোবাসা ও সহনশীলতার মাধ্যমে ঘরে জান্নাতি পরিবেশ রচনার বাস্তব নসিহত।
+          </p>
+        </div>
+        <div class="pt-4 border-t border-gray-100 dark:border-emerald-900/40 flex items-center justify-between">
+          <span class="text-xs text-gray-500 dark:text-gray-400"><i class="far fa-clock mr-1"></i> ৩৫ মিনিট</span>
+          <a href="https://www.youtube.com/results?search_query=monir+ujjaman+khan+waz" target="_blank" class="inline-flex items-center text-xs font-bold text-emerald-700 dark:text-gold-400 hover:underline">
+            <i class="fab fa-youtube text-red-500 mr-1.5 text-base"></i> শুনুন
+          </a>
+        </div>
+      </div>
+
+      <!-- Bayan 3 -->
+      <div class="bayan-card glass-card rounded-2xl p-6 flex flex-col justify-between" data-scholar="azhari" data-category="family">
+        <div>
+          <div class="flex items-center justify-between text-xs text-gold-600 dark:text-gold-400 font-semibold mb-3">
+            <span><i class="fas fa-user-circle mr-1"></i> ড. মিজানুর রহমান আজহারী</span>
+            <span class="px-2.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200">যুবসমাজ</span>
+          </div>
+          <h5 class="text-lg font-bold text-emerald-950 dark:text-white mb-2 leading-snug">সময়ের মূল্য ও তরুণ প্রজন্মের প্রতি নসিহত</h5>
+          <p class="text-xs text-gray-600 dark:text-gray-300 line-clamp-3 mb-4 leading-relaxed">
+            তরুণ বয়সের উদ্দীপনাকে আল্লাহর সন্তুষ্টি ও দ্বীনের খিদমতে কীভাবে কাজে লাগানো যায়, তার অনুপ্রেরণাদায়ক দিকনির্দেশনা।
+          </p>
+        </div>
+        <div class="pt-4 border-t border-gray-100 dark:border-emerald-900/40 flex items-center justify-between">
+          <span class="text-xs text-gray-500 dark:text-gray-400"><i class="far fa-clock mr-1"></i> ৪০ মিনিট</span>
+          <a href="https://www.youtube.com/results?search_query=mizanur+rahman+azhari+youth" target="_blank" class="inline-flex items-center text-xs font-bold text-emerald-700 dark:text-gold-400 hover:underline">
+            <i class="fab fa-youtube text-red-500 mr-1.5 text-base"></i> শুনুন
+          </a>
+        </div>
+      </div>
+
+      <!-- Bayan 4 -->
+      <div class="bayan-card glass-card rounded-2xl p-6 flex flex-col justify-between" data-scholar="monir" data-category="tafsir">
+        <div>
+          <div class="flex items-center justify-between text-xs text-gold-600 dark:text-gold-400 font-semibold mb-3">
+            <span><i class="fas fa-user-circle mr-1"></i> মাওলানা মনিরুজ্জামান খান</span>
+            <span class="px-2.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200">আখলাক</span>
+          </div>
+          <h5 class="text-lg font-bold text-emerald-950 dark:text-white mb-2 leading-snug">অন্তরের পবিত্রতা ও তাকওয়ার গুরুত্ব</h5>
+          <p class="text-xs text-gray-600 dark:text-gray-300 line-clamp-3 mb-4 leading-relaxed">
+            রিয়া (লোকদেখানো ভাব), অহংকার ও হিংসা থেকে অন্তরকে মুক্ত করে আল্লাহর খাঁটি বান্দা হওয়ার সহজ ও কার্যকরী আমলসমূহ।
+          </p>
+        </div>
+        <div class="pt-4 border-t border-gray-100 dark:border-emerald-900/40 flex items-center justify-between">
+          <span class="text-xs text-gray-500 dark:text-gray-400"><i class="far fa-clock mr-1"></i> ৩০ মিনিট</span>
+          <a href="https://www.youtube.com/results?search_query=monir+ujjaman+khan+bayan" target="_blank" class="inline-flex items-center text-xs font-bold text-emerald-700 dark:text-gold-400 hover:underline">
+            <i class="fab fa-youtube text-red-500 mr-1.5 text-base"></i> শুনুন
+          </a>
+        </div>
+      </div>
+
+      <!-- Bayan 5 -->
+      <div class="bayan-card glass-card rounded-2xl p-6 flex flex-col justify-between" data-scholar="azhari" data-category="tafsir">
+        <div>
+          <div class="flex items-center justify-between text-xs text-gold-600 dark:text-gold-400 font-semibold mb-3">
+            <span><i class="fas fa-user-circle mr-1"></i> ড. মিজানুর রহমান আজহারী</span>
+            <span class="px-2.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200">তাফসীর</span>
+          </div>
+          <h5 class="text-lg font-bold text-emerald-950 dark:text-white mb-2 leading-snug">সূরা ইউসুফ: হতাশা কাটিয়ে ঘুরে দাঁড়ানোর গল্প</h5>
+          <p class="text-xs text-gray-600 dark:text-gray-300 line-clamp-3 mb-4 leading-relaxed">
+            কঠিন বিপদ ও ষড়যন্ত্র পেরিয়ে আল্লাহর ওপর অবিচল আস্থার মাধ্যমে বিজয়ের সর্বোচ্চ চূড়ায় পৌঁছানোর এক অপূর্ব কোরআনিক শিক্ষা।
+          </p>
+        </div>
+        <div class="pt-4 border-t border-gray-100 dark:border-emerald-900/40 flex items-center justify-between">
+          <span class="text-xs text-gray-500 dark:text-gray-400"><i class="far fa-clock mr-1"></i> ৫০ মিনিট</span>
+          <a href="https://www.youtube.com/results?search_query=mizanur+rahman+azhari+surah+yusuf" target="_blank" class="inline-flex items-center text-xs font-bold text-emerald-700 dark:text-gold-400 hover:underline">
+            <i class="fab fa-youtube text-red-500 mr-1.5 text-base"></i> শুনুন
+          </a>
+        </div>
+      </div>
+
+      <!-- Bayan 6 -->
+      <div class="bayan-card glass-card rounded-2xl p-6 flex flex-col justify-between" data-scholar="monir" data-category="family">
+        <div>
+          <div class="flex items-center justify-between text-xs text-gold-600 dark:text-gold-400 font-semibold mb-3">
+            <span><i class="fas fa-user-circle mr-1"></i> মাওলানা মনিরুজ্জামান খান</span>
+            <span class="px-2.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200">আমল</span>
+          </div>
+          <h5 class="text-lg font-bold text-emerald-950 dark:text-white mb-2 leading-snug">দৈনন্দিন জীবনে ছোট ছোট আমলের পাহাড়সম সওয়াব</h5>
+          <p class="text-xs text-gray-600 dark:text-gray-300 line-clamp-3 mb-4 leading-relaxed">
+            সহজ কিছু মাসনূন দোয়া ও জিকির যা নিয়মিত পাঠ করলে আল্লাহর অফুরন্ত রহমত এবং কিয়ামতের দিন আমলনামা ভারী হবে।
+          </p>
+        </div>
+        <div class="pt-4 border-t border-gray-100 dark:border-emerald-900/40 flex items-center justify-between">
+          <span class="text-xs text-gray-500 dark:text-gray-400"><i class="far fa-clock mr-1"></i> ২৮ মিনিট</span>
+          <a href="https://www.youtube.com/results?search_query=monir+ujjaman+khan" target="_blank" class="inline-flex items-center text-xs font-bold text-emerald-700 dark:text-gold-400 hover:underline">
+            <i class="fab fa-youtube text-red-500 mr-1.5 text-base"></i> শুনুন
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. Words of Wisdom (নসিহত ও বাণী) -->
+  <section id="quotes" class="py-16 bg-emerald-900/10 dark:bg-emerald-950/60 border-y border-gold-500/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-gold-600 dark:text-gold-400">হৃদয়স্পর্শী বাণী</span>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 dark:text-white mt-1">মূল্যবান নসিহত</h3>
+        <div class="w-20 h-1 bg-gradient-to-r from-gold-400 to-emerald-600 mx-auto mt-3 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Quote 1 -->
+        <div class="glass-card rounded-2xl p-7 relative flex flex-col justify-between">
+          <i class="fas fa-quote-left text-3xl text-gold-500/30 absolute top-5 left-5 pointer-events-none"></i>
+          <p class="text-base sm:text-lg text-gray-700 dark:text-gray-200 font-medium italic mb-6 pt-4 relative z-10 leading-relaxed">
+            "সব হারানোর পরেও যার সাথে আল্লাহর সম্পর্ক আছে, সে কখনো নিঃস্ব নয়। আর যে আল্লাহকে হারাল, সে সারা দুনিয়া পেয়েও রিক্তহস্ত।"
+          </p>
+          <div class="flex items-center justify-between border-t border-emerald-900/10 dark:border-emerald-800/40 pt-4">
+            <div class="flex items-center space-x-3">
+              <img src="assets/images/azhari.png" class="w-10 h-10 rounded-full border border-gold-400 object-cover object-top" alt="আজহারী">
+              <span class="text-sm font-bold text-emerald-900 dark:text-gold-400">ড. মিজানুর রহমান আজহারী</span>
+            </div>
+            <button class="copy-quote-btn p-2 rounded-lg bg-emerald-50 dark:bg-emerald-900/40 hover:bg-gold-500 hover:text-white transition-colors text-xs font-semibold text-emerald-800 dark:text-gray-300" data-quote="সব হারানোর পরেও যার সাথে আল্লাহর সম্পর্ক আছে, সে কখনো নিঃস্ব নয়। আর যে আল্লাহকে হারাল, সে সারা দুনিয়া পেয়েও রিক্তহস্ত। — ড. মিজানুর রহমান আজহারী">
+              <i class="far fa-copy mr-1"></i> কপি করুন
+            </button>
+          </div>
+        </div>
+
+        <!-- Quote 2 -->
+        <div class="glass-card rounded-2xl p-7 relative flex flex-col justify-between">
+          <i class="fas fa-quote-left text-3xl text-gold-500/30 absolute top-5 left-5 pointer-events-none"></i>
+          <p class="text-base sm:text-lg text-gray-700 dark:text-gray-200 font-medium italic mb-6 pt-4 relative z-10 leading-relaxed">
+            "সুন্নাহ অনুযায়ী জীবন পরিচালিত করলে দুনিয়াতে অন্তরের প্রশান্তি পাওয়া যায় এবং আখিরাতে রাসূল (সা.)-এর শাফায়াত নসিব হবে।"
+          </p>
+          <div class="flex items-center justify-between border-t border-emerald-900/10 dark:border-emerald-800/40 pt-4">
+            <div class="flex items-center space-x-3">
+              <img src="assets/images/monir_khan.png" class="w-10 h-10 rounded-full border border-gold-400 object-cover object-top" alt="মাওলানা মনিরুজ্জামান খান">
+              <span class="text-sm font-bold text-emerald-900 dark:text-gold-400">মাওলানা মনিরুজ্জামান খান</span>
+            </div>
+            <button class="copy-quote-btn p-2 rounded-lg bg-emerald-50 dark:bg-emerald-900/40 hover:bg-gold-500 hover:text-white transition-colors text-xs font-semibold text-emerald-800 dark:text-gray-300" data-quote="সুন্নাহ অনুযায়ী জীবন পরিচালিত করলে দুনিয়াতে অন্তরের প্রশান্তি পাওয়া যায় এবং আখিরাতে রাসূল (সা.)-এর শাফায়াত নসিব হবে। — মাওলানা মনিরুজ্জামান খান">
+              <i class="far fa-copy mr-1"></i> কপি করুন
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Digital Tasbih & Daily Dhikr (ইন্টারেক্টিভ ডিজিটাল তাসবীহ) -->
+  <section id="tasbih" class="py-20 max-w-4xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <span class="text-xs font-bold uppercase tracking-widest text-gold-600 dark:text-gold-400">আত্মার খোরাক</span>
+      <h3 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 dark:text-white mt-1">ডিজিটাল তাসবীহ কাউন্টার</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">যেকোনো মুহূর্তে তাসবীহ পাঠ করুন এবং গণনা রাখুন</p>
+      <div class="w-20 h-1 bg-gradient-to-r from-gold-400 to-emerald-600 mx-auto mt-3 rounded-full"></div>
+    </div>
+
+    <div class="glass-card rounded-3xl p-8 sm:p-12 shadow-2xl border-2 border-gold-500/40 text-center relative overflow-hidden">
+      
+      <!-- Dhikr Selector -->
+      <div class="max-w-xs mx-auto mb-8">
+        <label for="dhikr-select" class="block text-xs font-bold text-gray-500 dark:text-emerald-300 uppercase mb-2">যিকির নির্বাচন করুন</label>
+        <select id="dhikr-select" class="w-full bg-emerald-50 dark:bg-emerald-900/60 border border-gold-500/50 rounded-xl px-4 py-2.5 text-sm font-semibold text-emerald-950 dark:text-gold-300 focus:outline-none focus:ring-2 focus:ring-gold-500">
+          <option value="1" data-arabic="سُبْحَانَ اللَّهِ" data-bangla="সুবহানাল্লাহ (আল্লাহ অতি পবিত্র)">سُبْحَانَ اللَّهِ — সুবহানাল্লাহ</option>
+          <option value="2" data-arabic="الْحَمْدُ لِلَّهِ" data-bangla="আলহামদুলিল্লাহ (সকল প্রশংসা আল্লাহর)">الْحَمْدُ لِلَّهِ — আলহামদুলিল্লাহ</option>
+          <option value="3" data-arabic="اللَّهُ أَكْبَرُ" data-bangla="আল্লাহু আকবার (আল্লাহ সর্বশ্রেষ্ঠ)">اللَّهُ أَكْبَرُ — আল্লাহু আকবার</option>
+          <option value="4" data-arabic="لَا إِلٰهَ إِلَّا اللَّهُ" data-bangla="লা ইলাহা ইল্লাল্লাহ (আল্লাহ ছাড়া সত্য কোনো মাবুদ নেই)">لَا إِلٰهَ إِلَّا اللَّهُ — লা ইলাহা ইল্লাল্লাহ</option>
+          <option value="5" data-arabic="أَسْتَغْفِرُ اللَّهَ" data-bangla="আস্তাগফিরুল্লাহ (আমি আল্লাহর ক্ষমা প্রার্থনা করছি)">أَسْتَغْفِرُ اللَّهَ — আস্তাগফিরুল্লাহ</option>
+          <option value="6" data-arabic="سُبْحَانَ اللَّهِ وَبِحَمْدِهِ" data-bangla="সুবহানাল্লাহি ওয়া বিহামদিহি">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ</option>
+        </select>
+      </div>
+
+      <!-- Current Dhikr Display -->
+      <div class="mb-8">
+        <p id="current-dhikr-arabic" class="arabic-font text-4xl sm:text-5xl font-bold gold-gradient-text mb-2">
+          سُبْحَانَ اللَّهِ
+        </p>
+        <p id="current-dhikr-bangla" class="text-sm sm:text-base font-semibold text-emerald-800 dark:text-emerald-300">
+          সুবহানাল্লাহ (আল্লাহ অতি পবিত্র)
+        </p>
+      </div>
+
+      <!-- Counter Circle Display -->
+      <div class="relative w-44 h-44 sm:w-52 sm:h-52 mx-auto mb-8 rounded-full border-4 border-gold-500/60 bg-gradient-to-tr from-emerald-900 to-emerald-800 flex flex-col items-center justify-center shadow-inner">
+        <span class="text-xs text-gold-300 uppercase tracking-widest font-semibold mb-1">মোট গণনা</span>
+        <span id="tasbih-count" class="text-5xl sm:text-6xl font-black text-white tracking-wider transition-transform duration-100">0</span>
+        <span class="text-xs text-gray-300 mt-2 font-medium">টার্গেট: <span id="tasbih-target" class="text-gold-400 font-bold">৩৩</span></span>
+      </div>
+
+      <!-- Click Button (Big Tactile Push) -->
+      <div class="flex items-center justify-center gap-6 mb-8">
+        <button id="tasbih-reset-btn" class="w-12 h-12 rounded-full bg-red-600/20 hover:bg-red-600/40 text-red-500 border border-red-500/40 flex items-center justify-center transition-all" title="রিসেট করুন">
+          <i class="fas fa-undo text-sm"></i>
+        </button>
+
+        <button id="tasbih-click-btn" class="tasbih-btn w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-b from-gold-400 to-gold-600 hover:from-gold-300 hover:to-gold-500 text-emerald-950 font-black text-xl shadow-xl flex items-center justify-center transition-all border-4 border-white/30 cursor-pointer">
+          <i class="fas fa-fingerprint text-3xl"></i>
+        </button>
+
+        <div class="w-12 h-12"></div> <!-- spacer for balance -->
+      </div>
+
+      <!-- Target Selection Buttons -->
+      <div class="flex items-center justify-center gap-3 text-xs font-semibold">
+        <span class="text-gray-500 dark:text-gray-400">টার্গেট:</span>
+        <button class="target-btn px-3 py-1.5 rounded-lg border border-gold-500/40 bg-emerald-600 text-white" data-target="33">৩৩</button>
+        <button class="target-btn px-3 py-1.5 rounded-lg border border-gold-500/40 bg-emerald-100 dark:bg-emerald-900/60" data-target="100">১০০</button>
+        <button class="target-btn px-3 py-1.5 rounded-lg border border-gold-500/40 bg-emerald-100 dark:bg-emerald-900/60" data-target="0">আনলিমিটেড</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. Daily Masnoon Duas (দৈনিক প্রয়োজনীয় মাসনূন দোয়া) -->
+  <section id="duas" class="py-16 bg-emerald-50/40 dark:bg-emerald-950/40 border-t border-gold-500/20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-gold-600 dark:text-gold-400">প্রতিদিনের আমল</span>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 dark:text-white mt-1">জরুরি মাসনূন দোয়া</h3>
+        <div class="w-20 h-1 bg-gradient-to-r from-gold-400 to-emerald-600 mx-auto mt-3 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Dua 1 -->
+        <div class="glass-card rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h6 class="font-bold text-emerald-950 dark:text-gold-400 text-base">১. পেরেশানি ও দুশ্চিন্তা মুক্তির দোয়া</h6>
+            <span class="text-xs bg-emerald-100 dark:bg-emerald-900/80 px-2 py-0.5 rounded text-emerald-800 dark:text-emerald-300">বুখারী ২৮৯৩</span>
+          </div>
+          <p class="arabic-font text-xl text-right text-emerald-900 dark:text-emerald-200 mb-2 leading-loose">
+            اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْبُخْلِ وَالْجُبْنِ، وَضَلَعِ الدَّيْنِ، وَغَلَبَةِ الرِّجَالِ
+          </p>
+          <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+            <strong>উচ্চারণ:</strong> আল্লা-হুম্মা ইন্নী আ‘ঊযু বিকা মিনাল হাম্মি ওয়াল হাযান, ওয়াল ‘আজযি ওয়াল কাসাল, ওয়াল বুখলি ওয়াল জুবন, ওয়া দ্বালা‘ইদ দাইনি ওয়া গালাবাতির রিজাল।
+          </p>
+        </div>
+
+        <!-- Dua 2 -->
+        <div class="glass-card rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h6 class="font-bold text-emerald-950 dark:text-gold-400 text-base">২. রিযিক ও উপকারী জ্ঞান বৃদ্ধির দোয়া</h6>
+            <span class="text-xs bg-emerald-100 dark:bg-emerald-900/80 px-2 py-0.5 rounded text-emerald-800 dark:text-emerald-300">ইবনে মাজাহ ৯২৫</span>
+          </div>
+          <p class="arabic-font text-xl text-right text-emerald-900 dark:text-emerald-200 mb-2 leading-loose">
+            اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلاً مُتَقَبَّلاً
+          </p>
+          <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+            <strong>উচ্চারণ:</strong> আল্লা-হুম্মা ইন্নী আস-আলুকা ‘ইলমান না-ফি‘আ, ওয়া রিযকান ত্বইয়িবা, ওয়া ‘আমালান মুতাক্বব্বালা।
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Footer -->
+  <footer class="bg-emerald-950 text-gray-300 border-t border-gold-500/30 py-12">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-emerald-800 to-emerald-600 border border-gold-500 mx-auto flex items-center justify-center text-gold-400 mb-4">
+        <i class="fas fa-moon text-lg"></i>
+      </div>
+      <h5 class="text-xl font-bold text-white mb-2">দ্বীনি আলোকবর্তিকা পোর্টাল</h5>
+      <p class="text-xs text-gray-400 max-w-md mx-auto mb-6">
+        আল্লাহ তায়ালা আমাদের শ্রদ্ধেয় স্কলারদের নেক হায়াত দান করুন এবং তাঁদের দ্বীনি খেদমতকে কবুল করুন। আমিন।
+      </p>
+      <div class="text-xs text-gray-500 border-t border-emerald-900/60 pt-6">
+        পরিকল্পনা ও নির্দেশনায়: <strong>কমান্ডার ওমর শরীফ শুভ</strong> | ডেভেলপমেন্ট: Antigravity Co-Pilot
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal: Dr. Mizanur Rahman Azhari -->
+  <div id="modal-azhari" class="hidden fixed inset-0 z-50 items-center justify-center p-4">
+    <div class="bio-modal-backdrop absolute inset-0 bg-black/75 backdrop-blur-sm"></div>
+    <div class="relative bg-white dark:bg-emerald-950 rounded-3xl max-w-2xl w-full p-8 shadow-2xl border border-gold-500/50 max-h-[90vh] overflow-y-auto">
+      <button onclick="closeBioModal('azhari')" class="absolute top-6 right-6 text-gray-400 hover:text-white text-xl">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="flex items-center space-x-4 mb-6">
+        <img src="assets/images/azhari.png" class="w-20 h-20 rounded-2xl border-2 border-gold-500 object-cover object-top" alt="ড. আজহারী">
+        <div>
+          <h4 class="text-2xl font-bold text-emerald-950 dark:text-white">ড. মিজানুর রহমান আজহারী</h4>
+          <p class="text-xs text-gold-400 font-semibold">শিক্ষাবিদ, তাফসীর গবেষক ও আন্তর্জাতিক খ্যাতিসম্পন্ন দাঈ</p>
+        </div>
+      </div>
+
+      <div class="space-y-4 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+        <h6 class="font-bold text-emerald-900 dark:text-gold-300 text-base">শিক্ষা ও গবেষণা জীবন:</h6>
+        <p>
+          ড. মিজানুর রহমান আজহারী মিশরের বিশ্বখ্যাত <strong>আল-আজহার বিশ্ববিদ্যালয়</strong> থেকে তাফসীর ও উলুমুল কুরআনে প্রথম শ্রেণীতে স্নাতক সম্পন্ন করেন। পরবর্তীতে মালয়েশিয়ার আন্তর্জাতিক ইসলামিক বিশ্ববিদ্যালয় (IIUM) থেকে উচ্চতর ডিগ্রি ও পিএইচডি সম্পন্ন করেন।
+        </p>
+
+        <h6 class="font-bold text-emerald-900 dark:text-gold-300 text-base">দাওয়াতী দৃষ্টিভঙ্গি:</h6>
+        <p>
+          তাঁর প্রাঞ্জল ভাষা, আধুনিক বিজ্ঞানের সাথে কোরআনের সামঞ্জস্য উপস্থাপন এবং যুক্তিভিত্তিক বক্তব্য বাংলাদেশের কোটি তরুণকে নতুন করে ইসলামের প্রতি আকৃষ্ট করেছে। তিনি পারিবারিক সম্প্রীতি ও চারিত্রিক শুদ্ধতার ওপর বিশেষ জোর দেন।
+        </p>
+      </div>
+
+      <div class="mt-8 text-right">
+        <button onclick="closeBioModal('azhari')" class="px-6 py-2.5 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-semibold text-xs border border-gold-500/40">
+          বন্ধ করুন
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Maulana Monir Ujjaman Khan -->
+  <div id="modal-monir" class="hidden fixed inset-0 z-50 items-center justify-center p-4">
+    <div class="bio-modal-backdrop absolute inset-0 bg-black/75 backdrop-blur-sm"></div>
+    <div class="relative bg-white dark:bg-emerald-950 rounded-3xl max-w-2xl w-full p-8 shadow-2xl border border-gold-500/50 max-h-[90vh] overflow-y-auto">
+      <button onclick="closeBioModal('monir')" class="absolute top-6 right-6 text-gray-400 hover:text-white text-xl">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="flex items-center space-x-4 mb-6">
+        <img src="assets/images/monir_khan.png" class="w-20 h-20 rounded-2xl border-2 border-gold-500 object-cover object-top" alt="মাওলানা মনিরুজ্জামান খান">
+        <div>
+          <h4 class="text-2xl font-bold text-emerald-950 dark:text-white">মাওলানা মনিরুজ্জামান খান</h4>
+          <p class="text-xs text-gold-400 font-semibold">আলেমে দ্বীন, সুন্নাহর একনিষ্ঠ সাধক ও বক্তা</p>
+        </div>
+      </div>
+
+      <div class="space-y-4 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+        <h6 class="font-bold text-emerald-900 dark:text-gold-300 text-base">দ্বীনি কর্মপদ্ধতি ও খিদমত:</h6>
+        <p>
+          মাওলানা মনিরুজ্জামান খান সমাজে বিশুদ্ধ সুন্নাহর চর্চা, বেদআত মুক্ত আমল এবং মুসলিম পরিবারের শান্তি সুরক্ষায় নিয়মিত আলোচনা ও দ্বীনি শিক্ষা বিস্তার করে আসছেন।
+        </p>
+
+        <h6 class="font-bold text-emerald-900 dark:text-gold-300 text-base">দাওয়াত ও নসিহত:</h6>
+        <p>
+          তাঁর বয়ান ও নসিহতের মূল প্রতিপাদ্য হলো অন্তরের ইখলাস, পরকালীন জবাবদিহিতা এবং ছোট ছোট মাসনূন আমলের মাধ্যমে নিজের আত্মাকে পরিশুদ্ধ করা।
+        </p>
+      </div>
+
+      <div class="mt-8 text-right">
+        <button onclick="closeBioModal('monir')" class="px-6 py-2.5 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-semibold text-xs border border-gold-500/40">
+          বন্ধ করুন
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
